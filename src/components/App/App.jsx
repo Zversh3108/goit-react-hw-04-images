@@ -19,12 +19,11 @@ export function App() {
   const [showModal, setShowModal] = useState(false);
   const [selectedImageURL, setSelectedImageURL] = useState('');
   const [selectedImageTags, setSelectedImageTags] = useState('');
-  const [showGallery, setShowGallery] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
   const handleFormSubmit = word => {
     setSearchWord(word);
-    // setShowGallery(true);
+  
     setCurrentPage(1); // Скидаємо поточну сторінку до першої при новому пошуковому запиті
   };
 
@@ -54,7 +53,6 @@ export function App() {
       })
       .finally(() => {
         setLoading(false);
-        // setShowGallery(true);
       });
   }, [searchWord, currentPage]);
 

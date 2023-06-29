@@ -12,7 +12,7 @@ export function Modal(props) {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [onClose]);
+  });
 
   const handleBackdropClick = evt => {
     if (evt.currentTarget === evt.target) {
